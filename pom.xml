@@ -14,7 +14,7 @@
     <name>Mule module HTTP Policy API</name>
 
     <properties>
-        <formatterConfigPath>../../formatter.xml</formatterConfigPath>
+        <formatterConfigPath>formatter.xml</formatterConfigPath>
         <oldMuleArtifactVersion>1.0.0</oldMuleArtifactVersion>
     </properties>
 
