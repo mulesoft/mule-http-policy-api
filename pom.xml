@@ -337,6 +337,19 @@
                 <artifactId>allure-maven</artifactId>
             </plugin>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>parse-version</id>
+                        <goals>
+                            <goal>parse-version</goal>
+                        </goals>
+                        <phase>validate</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.revapi</groupId>
                 <artifactId>revapi-maven-plugin</artifactId>
                 <version>${revapi.maven.plugin.version}</version>
@@ -372,6 +385,16 @@
                                     }
                                 }
                             ]]></analysisConfiguration>
+                    <analysisConfigurationFiles combine.children="append">
+                        <configurationFile>
+                            <path>api-changes.json</path>
+                            <roots>
+                                <root>
+                                    ${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}
+                                </root>
+                            </roots>
+                        </configurationFile>
+                    </analysisConfigurationFiles>
                 </configuration>
                 <executions>
                     <execution>

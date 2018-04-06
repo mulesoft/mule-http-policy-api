@@ -6,6 +6,7 @@
  */
 package org.mule.runtime.http.policy.api;
 
+import org.mule.api.annotation.NoExtend;
 import org.mule.runtime.api.component.Component;
 import org.mule.runtime.policy.api.PolicyPointcutParameters;
 
@@ -14,6 +15,7 @@ import org.mule.runtime.policy.api.PolicyPointcutParameters;
  *
  * @since 4.0
  */
+@NoExtend
 public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParameters {
 
   private final String path;
