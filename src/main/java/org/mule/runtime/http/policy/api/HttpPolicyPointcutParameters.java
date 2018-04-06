@@ -6,6 +6,7 @@
  */
 package org.mule.runtime.http.policy.api;
 
+import org.mule.api.annotation.NoExtend;
 import org.mule.runtime.api.component.Component;
 import org.mule.runtime.policy.api.PolicyPointcutParameters;
 
@@ -14,6 +15,7 @@ import org.mule.runtime.policy.api.PolicyPointcutParameters;
  *
  * @since 4.0
  */
+@NoExtend
 public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParameters {
 
   private final String path;
@@ -27,7 +29,20 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
    * @param method the HTTP method of the message
    */
   public HttpPolicyPointcutParameters(Component component, String path, String method) {
-    super(component);
+    this(component, null, path, method);
+  }
+
+  /**
+   * Creates a new {@link PolicyPointcutParameters}
+   *
+   * @param component the component where the policy is being applied.
+   * @param sourceParameters parameters used to match pointcuts of source policies
+   * @param path the target path of the message
+   * @param method the HTTP method of the message
+   */
+  public HttpPolicyPointcutParameters(Component component, PolicyPointcutParameters sourceParameters, String path,
+                                      String method) {
+    super(component, sourceParameters);
     this.path = path;
     this.method = method;
   }
