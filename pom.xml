@@ -121,7 +121,7 @@
 
         <revapi.maven.plugin.version>0.9.5</revapi.maven.plugin.version>
         <muleRevapiExtensionVersion>1.1.2-SNAPSHOT</muleRevapiExtensionVersion>
-        <oldMuleArtifactVersion>1.1.0</oldMuleArtifactVersion>
+        <oldMuleArtifactVersion>1.1.2</oldMuleArtifactVersion>
 
         <license.maven.plugin.version>2.11</license.maven.plugin.version>
         <allureJunitVersion>2.0-BETA17</allureJunitVersion>
