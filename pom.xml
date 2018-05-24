@@ -124,7 +124,7 @@
         <oldMuleArtifactVersion>1.1.1-SNAPSHOT</oldMuleArtifactVersion>
 
         <license.maven.plugin.version>2.11</license.maven.plugin.version>
-        <allureReportVersion>2.3.4</allureReportVersion>
+        <allureReportVersion>2.6.0</allureReportVersion>
         <allure.maven.plugin.version>2.9</allure.maven.plugin.version>
         <jacoco.version>0.8.1</jacoco.version>
 
