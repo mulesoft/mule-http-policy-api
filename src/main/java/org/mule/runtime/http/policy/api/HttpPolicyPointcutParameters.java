@@ -10,6 +10,8 @@ import org.mule.api.annotation.NoExtend;
 import org.mule.runtime.api.component.Component;
 import org.mule.runtime.policy.api.PolicyPointcutParameters;
 
+import java.util.Objects;
+
 /**
  * Specific implementation of {@link PolicyPointcutParameters} for HTTP.
  *
@@ -59,6 +61,25 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
    */
   public String getMethod() {
     return method;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(getComponent(), getSourceParameters(), method, path);
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (!super.equals(obj))
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    HttpPolicyPointcutParameters other = (HttpPolicyPointcutParameters) obj;
+    return Objects.equals(getComponent(), other.getComponent())
+        && Objects.equals(getSourceParameters(), other.getSourceParameters())
+        && Objects.equals(method, other.method) && Objects.equals(path, other.path);
   }
 
 }
