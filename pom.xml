@@ -130,6 +130,7 @@
 
         <maven.surefire.plugin.version>2.20.1</maven.surefire.plugin.version>
         <maven.enforcer.plugin.version>1.4.1</maven.enforcer.plugin.version>
+        <buildHelperMavenPluginVersion>3.0.0</buildHelperMavenPluginVersion>
     </properties>
 
     <dependencies>
@@ -338,6 +339,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
+                <version>${buildHelperMavenPluginVersion}</version>
                 <executions>
                     <execution>
                         <id>parse-version</id>
