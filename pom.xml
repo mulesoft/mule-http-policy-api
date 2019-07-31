@@ -120,7 +120,7 @@
         <formatterGoal>validate</formatterGoal>
 
         <revapi.maven.plugin.version>0.9.5</revapi.maven.plugin.version>
-        <muleRevapiExtensionVersion>1.1.3-SNAPSHOT</muleRevapiExtensionVersion>
+        <muleRevapiExtensionVersion>1.1.3</muleRevapiExtensionVersion>
         <oldMuleArtifactVersion>1.1.2</oldMuleArtifactVersion>
 
         <license.maven.plugin.version>2.11</license.maven.plugin.version>
