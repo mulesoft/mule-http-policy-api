@@ -6,8 +6,11 @@
  */
 package org.mule.runtime.http.policy.api;
 
+import static org.mule.runtime.api.util.MultiMap.emptyMultiMap;
+
 import org.mule.api.annotation.NoExtend;
 import org.mule.runtime.api.component.Component;
+import org.mule.runtime.api.util.MultiMap;
 import org.mule.runtime.policy.api.PolicyPointcutParameters;
 
 import java.util.Objects;
@@ -22,6 +25,7 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
 
   private final String path;
   private final String method;
+  private final MultiMap<String, String> headers;
 
   /**
    * Creates a new {@link PolicyPointcutParameters}
@@ -44,9 +48,24 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
    */
   public HttpPolicyPointcutParameters(Component component, PolicyPointcutParameters sourceParameters, String path,
                                       String method) {
+    this(component, sourceParameters, path, method, emptyMultiMap());
+  }
+
+  /**
+   * Creates a new {@link PolicyPointcutParameters}
+   *
+   * @param component the component where the policy is being applied.
+   * @param sourceParameters parameters used to match pointcuts of source policies
+   * @param path the target path of the message
+   * @param method the HTTP method of the message
+   * @param headers the HTTP headers of the message
+   */
+  public HttpPolicyPointcutParameters(Component component, PolicyPointcutParameters sourceParameters, String path,
+                                      String method, MultiMap<String, String> headers) {
     super(component, sourceParameters);
     this.path = path;
     this.method = method;
+    this.headers = headers;
   }
 
   /**
@@ -63,9 +82,16 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
     return method;
   }
 
+  /**
+   * @return the HTTP headers of the http message.
+   */
+  public MultiMap<String, String> getHeaders() {
+    return headers;
+  }
+
   @Override
   public int hashCode() {
-    return Objects.hash(getComponent(), getSourceParameters(), method, path);
+    return Objects.hash(getComponent(), getSourceParameters(), method, path, getHeaders());
   }
 
   @Override
@@ -82,7 +108,8 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
     HttpPolicyPointcutParameters other = (HttpPolicyPointcutParameters) obj;
     return Objects.equals(getComponent(), other.getComponent())
         && Objects.equals(getSourceParameters(), other.getSourceParameters())
-        && Objects.equals(method, other.method) && Objects.equals(path, other.path);
+        && Objects.equals(method, other.method) && Objects.equals(path, other.path)
+        && Objects.equals(getHeaders(), other.getHeaders());
   }
 
 }
