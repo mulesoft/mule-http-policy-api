@@ -11,11 +11,12 @@ import static com.google.common.collect.Sets.union;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptySet;
 import static java.util.Objects.requireNonNull;
+import static org.mule.runtime.api.util.Preconditions.checkArgument;
 
 import org.mule.runtime.policy.api.PolicyAwareAttributes;
 import org.mule.runtime.policy.api.SourcePolicyPointcutParametersFactory;
 
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import java.util.regex.Pattern;
@@ -109,27 +110,23 @@ public class SourcePolicyAwareAttributes implements PolicyAwareAttributes {
 
   public static class Builder {
 
-    private String[] headers = new String[] {};
-    private Pattern[] requestPathPatterns = new Pattern[] {};
+    private Set<String> headers = new HashSet<>();
+    private Set<Pattern> requestPathPatterns = new HashSet<>();
 
     public Builder headers(String... headers) {
-      if (headers == null || headers.length < 1) {
-        throw new IllegalArgumentException("At least on header is required");
-      }
-      this.headers = Arrays.copyOf(headers, headers.length);
+      checkArgument(headers != null && headers.length > 0, "At least one header is required");
+      this.headers = copyOf(asList(headers));
       return this;
     }
 
     public Builder requestPathPatterns(Pattern... requestPathPatterns) {
-      if (requestPathPatterns == null || requestPathPatterns.length < 1) {
-        throw new IllegalArgumentException("At least on pattern is required");
-      }
-      this.requestPathPatterns = Arrays.copyOf(requestPathPatterns, requestPathPatterns.length);
+      checkArgument(requestPathPatterns != null && requestPathPatterns.length > 0, "At least one pattern is required");
+      this.requestPathPatterns = copyOf(asList(requestPathPatterns));
       return this;
     }
 
     public SourcePolicyAwareAttributes build() {
-      return new SourcePolicyAwareAttributes(copyOf(asList(this.headers)), copyOf(asList(this.requestPathPatterns)));
+      return new SourcePolicyAwareAttributes(headers, requestPathPatterns);
     }
   }
 
