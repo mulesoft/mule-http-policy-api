@@ -87,6 +87,7 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
   /**
    * @return the target path of the http message without the base path where the listener is deployed. Note that this is only
    *         calculated when the {@code listenerPath} is open (ends with a wildcard) and will be {@code null} otherwise.
+   * @since 1.3
    */
   public String getMaskedRequestPath() {
     return maskedRequestPath;
@@ -94,6 +95,7 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
 
   /**
    * @return the HTTP headers of the http message.
+   * @since 1.3
    */
   public MultiMap<String, String> getHeaders() {
     return headers;
@@ -102,6 +104,8 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
   /**
    * Setter added to overcome that this is an abstract class and the constructor that sets this field was added in a later runtime
    * version, thus not possible to be invoked using reflection from older versions.
+   * 
+   * @since 1.3
    */
   public void setHeaders(MultiMap<String, String> headers) {
     this.headers = headers;
@@ -110,6 +114,8 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
   /**
    * Setter added to overcome that this is an abstract class and the constructor that sets this field was added in a later API
    * version, thus not possible to be invoked using reflection from older versions.
+   * 
+   * @since 1.3
    */
   public void setMaskedRequestPath(String maskedRequestPath) {
     this.maskedRequestPath = maskedRequestPath;
