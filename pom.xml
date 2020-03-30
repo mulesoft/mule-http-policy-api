@@ -131,6 +131,8 @@
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.enforcer.plugin.version>1.4.1</maven.enforcer.plugin.version>
         <buildHelperMavenPluginVersion>3.0.0</buildHelperMavenPluginVersion>
+
+        <maven.site.plugin.version>3.9.0</maven.site.plugin.version>
     </properties>
 
     <dependencies>
@@ -311,6 +313,11 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven.site.plugin.version}</version>
+            </plugin>
             <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
                 <artifactId>formatter-maven-plugin</artifactId>
