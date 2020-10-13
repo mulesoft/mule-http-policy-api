@@ -113,7 +113,7 @@
 
         <mulePolicyApiVersion>1.3.0-20200824</mulePolicyApiVersion>
         
-        <muleModuleMavenPluginVersion>1.2.0-20200824</muleModuleMavenPluginVersion>
+        <muleModuleMavenPluginVersion>1.2.0-20201013</muleModuleMavenPluginVersion>
 
         <javaFormatter.plugin.version>2.0.1</javaFormatter.plugin.version>
         <formatterConfigPath>formatter.xml</formatterConfigPath>
