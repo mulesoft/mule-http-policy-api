@@ -11,13 +11,19 @@ import org.mule.runtime.api.util.MultiMap;
 public class HttpRequestMessage {
 
   private final MultiMap<String, String> headers;
-  private final String url;
+  private final String scheme;
+  private final String domain;
+  private final int port;
+  private final String rawPath;
   private final String method;
-  //  private final
 
-  public HttpRequestMessage(MultiMap<String, String> headers, String url, String method) {
+  public HttpRequestMessage(MultiMap<String, String> headers, String scheme, String domain, int port, String rawPath,
+                            String method) {
     this.headers = headers;
-    this.url = url;
+    this.scheme = scheme;
+    this.domain = domain;
+    this.port = port;
+    this.rawPath = rawPath;
     this.method = method;
   }
 
@@ -25,11 +31,23 @@ public class HttpRequestMessage {
     return headers;
   }
 
-  public String getUrl() {
-    return url;
-  }
-
   public String getMethod() {
     return method;
+  }
+
+  public String getScheme() {
+    return scheme;
+  }
+
+  public String getDomain() {
+    return domain;
+  }
+
+  public int getPort() {
+    return port;
+  }
+
+  public String getRawPath() {
+    return rawPath;
   }
 }
