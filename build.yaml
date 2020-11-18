@@ -3,4 +3,4 @@ upstreamProjects:
 mavenSettingsXmlId: mule-runtime-maven-settings-MuleSettings
 projectType: runtime
 enableMavenTestStage: false
-devBranchesRegex : "AGW-4485"
+#devBranchesRegex : "AGW-4485"
