@@ -30,8 +30,8 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
    * Creates a new {@link PolicyPointcutParameters}
    *
    * @param component the component where the policy is being applied.
-   * @param path the target path of the message
-   * @param method the HTTP method of the message
+   * @param path      the target path of the message
+   * @param method    the HTTP method of the message
    */
   public HttpPolicyPointcutParameters(Component component, String path, String method) {
     this(component, null, path, method);
@@ -40,10 +40,10 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
   /**
    * Creates a new {@link PolicyPointcutParameters}
    *
-   * @param component the component where the policy is being applied.
+   * @param component        the component where the policy is being applied.
    * @param sourceParameters parameters used to match pointcuts of source policies
-   * @param path the target path of the message
-   * @param method the HTTP method of the message
+   * @param path             the target path of the message
+   * @param method           the HTTP method of the message
    */
   public HttpPolicyPointcutParameters(Component component, PolicyPointcutParameters sourceParameters, String path,
                                       String method) {
@@ -53,12 +53,12 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
   /**
    * Creates a new {@link PolicyPointcutParameters}
    *
-   * @param component the component where the policy is being applied.
-   * @param sourceParameters parameters used to match pointcuts of source policies
-   * @param path the target path of the message
-   * @param method the HTTP method of the message
+   * @param component         the component where the policy is being applied.
+   * @param sourceParameters  parameters used to match pointcuts of source policies
+   * @param path              the target path of the message
+   * @param method            the HTTP method of the message
    * @param maskedRequestPath the target path of the http message without the base path where the listener is deployed
-   * @param headers the HTTP headers of the message
+   * @param headers           the HTTP headers of the message
    * @since 1.3
    */
   public HttpPolicyPointcutParameters(Component component, PolicyPointcutParameters sourceParameters, String path,
