@@ -1,4 +1,21 @@
 {
+  "1.5.0": {
+    "revapi": {
+      "ignore": [
+        {
+          "code": "java.annotation.removed",
+          "old": "class org.mule.runtime.http.policy.api.HttpPolicyPointcutParameters",
+          "new": "class org.mule.runtime.http.policy.api.HttpPolicyPointcutParameters",
+          "annotationType": "org.mule.api.annotation.NoExtend",
+          "annotation": "@org.mule.api.annotation.NoExtend",
+          "package": "org.mule.runtime.http.policy.api",
+          "classSimpleName": "HttpPolicyPointcutParameters",
+          "elementKind": "class",
+          "justification": "This class is to be extended in the mule-http-connector."
+        }
+      ]
+    }
+  },
   "1.4.0": {
     "revapi": {
       "ignore": [
