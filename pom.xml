@@ -111,7 +111,7 @@
 
         <aspectjVersion>1.8.10</aspectjVersion>
 
-        <mulePolicyApiVersion>1.1.2-HF-SNAPSHOT</mulePolicyApiVersion>
+        <mulePolicyApiVersion>1.1.2-20220221</mulePolicyApiVersion>
         
         <muleModuleMavenPluginVersion>1.0.1-20220221</muleModuleMavenPluginVersion>
 
