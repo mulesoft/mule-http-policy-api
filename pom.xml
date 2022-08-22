@@ -6,7 +6,7 @@
 
     <groupId>org.mule.runtime</groupId>
     <artifactId>mule-module-http-policy-api</artifactId>
-    <version>1.4.1-SNAPSHOT</version>
+    <version>1.4.0-20220822</version>
 
     <name>Mule module HTTP Policy API</name>
     <description>Mule module HTTP Policy API</description>
