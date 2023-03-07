@@ -126,7 +126,7 @@
         <license.maven.plugin.version>2.11</license.maven.plugin.version>
         <allureReportVersion>2.8.1</allureReportVersion>
         <allure.maven.plugin.version>2.9</allure.maven.plugin.version>
-        <jacoco.version>0.8.6</jacoco.version>
+        <jacoco.version>0.8.8</jacoco.version>
 
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven.enforcer.plugin.version>1.4.1</maven.enforcer.plugin.version>
