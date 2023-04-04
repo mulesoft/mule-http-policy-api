@@ -4,4 +4,5 @@ upstreamProjects:
 # Uncomment it after they are copied
 #mavenSettingsXmlId : mule-runtime-maven-settings-MuleSettings
 projectType: runtime
+jdkTool: OPEN-JDK17
 enableMavenTestStage: false
