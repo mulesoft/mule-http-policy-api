@@ -9,7 +9,7 @@
  * Mule module HTTP Policy API.
  * 
  * @moduleGraph
- * @since 1.6
+ * @since 1.5
  */
 module org.mule.runtime.http.policy.api {
   
