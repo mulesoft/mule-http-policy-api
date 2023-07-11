@@ -120,7 +120,7 @@
         <formatterConfigPath>formatter.xml</formatterConfigPath>
         <formatterGoal>validate</formatterGoal>
 
-        <revapi.maven.plugin.version>0.9.5</revapi.maven.plugin.version>
+        <revapi.maven.plugin.version>0.15.0</revapi.maven.plugin.version>
         <muleRevapiExtensionVersion>1.5.0-SNAPSHOT</muleRevapiExtensionVersion>
         <oldMuleArtifactVersion>1.4.0</oldMuleArtifactVersion>
 
