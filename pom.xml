@@ -122,7 +122,7 @@
 
         <revapi.maven.plugin.version>0.15.0</revapi.maven.plugin.version>
         <muleRevapiExtensionVersion>1.8.0-SNAPSHOT</muleRevapiExtensionVersion>
-        <oldMuleArtifactVersion>1.6.0</oldMuleArtifactVersion>
+        <oldMuleArtifactVersion>1.7.0-rc1</oldMuleArtifactVersion>
 
         <mulesoftLicenseVersion>1.4.0</mulesoftLicenseVersion>
         <license.maven.plugin.version>4.2</license.maven.plugin.version>
