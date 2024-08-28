@@ -6,7 +6,7 @@
 
     <groupId>org.mule.runtime</groupId>
     <artifactId>mule-module-http-policy-api</artifactId>
-    <version>1.7.3-SNAPSHOT</version>
+    <version>1.7.4-SNAPSHOT</version>
 
     <name>Mule module HTTP Policy API</name>
     <description>Mule module HTTP Policy API</description>
@@ -112,16 +112,16 @@
 
         <aspectjVersion>1.9.2</aspectjVersion>
 
-        <mulePolicyApiVersion>1.7.3-SNAPSHOT</mulePolicyApiVersion>
+        <mulePolicyApiVersion>1.7.4-SNAPSHOT</mulePolicyApiVersion>
         
-        <muleModuleMavenPluginVersion>1.7.3-SNAPSHOT</muleModuleMavenPluginVersion>
+        <muleModuleMavenPluginVersion>1.7.4-SNAPSHOT</muleModuleMavenPluginVersion>
 
         <javaFormatter.plugin.version>2.14.0</javaFormatter.plugin.version>
         <formatterConfigPath>formatter.xml</formatterConfigPath>
         <formatterGoal>validate</formatterGoal>
 
         <revapi.maven.plugin.version>0.15.0</revapi.maven.plugin.version>
-        <muleRevapiExtensionVersion>1.7.3-SNAPSHOT</muleRevapiExtensionVersion>
+        <muleRevapiExtensionVersion>1.7.4-SNAPSHOT</muleRevapiExtensionVersion>
         <oldMuleArtifactVersion>1.6.0</oldMuleArtifactVersion>
 
         <mulesoftLicenseVersion>1.4.0</mulesoftLicenseVersion>
