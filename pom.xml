@@ -117,7 +117,7 @@
 
         <mulePolicyApiVersion>1.8.0-rc2</mulePolicyApiVersion>
         
-        <muleModuleMavenPluginVersion>1.8.0-rc2</muleModuleMavenPluginVersion>
+        <muleModuleMavenPluginVersion>1.8.0-rc3</muleModuleMavenPluginVersion>
 
         <formatterConfigPath>formatter.xml</formatterConfigPath>
 
