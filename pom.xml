@@ -115,7 +115,7 @@
         <javaVersion>1.8</javaVersion>
         <javaReleaseVersion>8</javaReleaseVersion>
 
-        <mulePolicyApiVersion>1.8.4-rc1</mulePolicyApiVersion>
+        <mulePolicyApiVersion>1.8.4</mulePolicyApiVersion>
         
         <muleModuleMavenPluginVersion>1.8.4</muleModuleMavenPluginVersion>
 
