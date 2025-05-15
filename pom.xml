@@ -13,7 +13,7 @@
 
     <groupId>org.mule.runtime</groupId>
     <artifactId>mule-module-http-policy-api</artifactId>
-    <version>1.9.4</version>
+    <version>1.9.5</version>
 
     <name>Mule module HTTP Policy API</name>
     <description>Mule module HTTP Policy API</description>
