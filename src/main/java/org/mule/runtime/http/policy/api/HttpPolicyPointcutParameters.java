@@ -104,7 +104,7 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
   /**
    * Setter added to overcome that this is an abstract class and the constructor that sets this field was added in a later runtime
    * version, thus not possible to be invoked using reflection from older versions.
-   * 
+   *
    * @since 1.3
    */
   public void setHeaders(MultiMap<String, String> headers) {
@@ -114,7 +114,7 @@ public abstract class HttpPolicyPointcutParameters extends PolicyPointcutParamet
   /**
    * Setter added to overcome that this is an abstract class and the constructor that sets this field was added in a later API
    * version, thus not possible to be invoked using reflection from older versions.
-   * 
+   *
    * @since 1.3
    */
   public void setMaskedRequestPath(String maskedRequestPath) {
