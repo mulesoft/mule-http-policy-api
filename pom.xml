@@ -118,7 +118,7 @@
 
         <mulePolicyApiVersion>1.10.0-SNAPSHOT</mulePolicyApiVersion>
         
-        <muleModuleMavenPluginVersion>1.10.0-SNAPSHOT</muleModuleMavenPluginVersion>
+        <muleModuleMavenPluginVersion>1.10.0-20250610</muleModuleMavenPluginVersion>
 
         <oldMuleArtifactVersion>1.7.0-rc1</oldMuleArtifactVersion>
 
